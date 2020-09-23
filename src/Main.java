@@ -6,10 +6,11 @@ import java.util.List;
 
 public class Main {
     public static void main(String args[]) throws IOException {
+        double[][] matrix = matr();
+        trans(matrix);
 
 
 
-        trans(matr());
 
 
     }
@@ -23,11 +24,10 @@ public class Main {
                 }
             }
             System.out.println();
-            System.out.println("Новая матрица");
-            System.out.println("------");
+            System.out.println("Транспонированная матрица"+"\n-------------------------");
             for (double[] doubles : a) {
                 for (int j = 0; j < a.length; j++) {
-                    System.out.print(doubles[j] + " ");
+                    System.out.printf("%8.2f",doubles[j]);
                 }
                 System.out.println();
             }
@@ -59,9 +59,10 @@ public class Main {
                     matrix[i][j] = Double.parseDouble(line[j]);
                 }
             }
+            System.out.println("Исходная матрица"+"\n-------------------------");
             for (int i = 0; i < matrixHeight; i++) {
                 for (int j = 0;j<matrixWidth;j++){
-                    System.out.print(matrix[i][j]+" ");
+                    System.out.printf("%8.2f",matrix[i][j]);
                 }
                 System.out.println();
 
